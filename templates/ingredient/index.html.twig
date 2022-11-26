@@ -6,19 +6,19 @@
     <div class="container mt-4">
         <h1>Mes ingrédients</h1>
 
-        <table>
+        <table class="table table-hover">
             <thead>
                 <tr>
-                    <th class="col">Numéro</th>
-                    <th class="col">Nom</th>
-                    <th class="col">Prix</th>
-                    <th class="col">Date de création</th>
+                    <th scope="col">Numéro</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Date de création</th>
                 </tr>
             </thead>
             <tbody>
                 {% for ingredient in ingredients %}
                     <tr class="table-primary">
-                        <th>{{ ingredient.id }}</th>
+                        <th scope="row">{{ ingredient.id }}</th>
                         <td>{{ ingredient.name }}</td>
                         <td>{{ ingredient.price }}</td>
                         <td>{{ ingredient.createdAt|date("d-m-Y") }}</td>
