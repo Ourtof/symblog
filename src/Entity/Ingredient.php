@@ -19,7 +19,7 @@ class Ingredient
     #[ORM\Column]
     private ?float $price = null;
 
-    #[ORM\Column]
+    #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $createdAt = null;
 
     public function getId(): ?int
